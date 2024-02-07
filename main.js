@@ -1,5 +1,10 @@
-const canvas = document.getElementById("myCanvas");
-const c = canvas.getContext("2d");
+let canvas = document.getElementById("canvas");
 
-c.fillStyle = "red";
-c.fillRect(0, 0, 10, 10);
+
+var window_height = window.innerHeight;
+var window_width = window.innerWidth;
+
+canvas.width = window_width;
+canvas.height = window_height;
+
+canvas.style.background = "#ff8";
