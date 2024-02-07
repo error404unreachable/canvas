@@ -10,3 +10,6 @@ canvas.width = window_width;
 canvas.height = window_height;
 
 canvas.style.background = "#ff8";
+
+
+context.fillRect(0, 0, 100, 100);
