@@ -2,14 +2,16 @@ let canvas = document.getElementById("canvas");
 
 let context = canvas.getContext("2d");
 
+var img = new Image(),
+    x = canvas.width,
+    y = 0;
 
-var window_height = window.innerHeight;
-var window_width = window.innerWidth;
+img.onload = animate;
+img.src = "Red.png";   // load image
 
-canvas.width = window_width;
-canvas.height = window_height;
-
-canvas.style.background = "#ff8";
-
-
-context.fillRect(0, 0, 100, 100);
+function animate() {
+  context.clearRect(0, 0, canvas.width, canvas.height);  // clear canvas
+  context.drawImage(img, x, y);                       // draw image at current position
+  x -= 4;
+  if (x > 250) requestAnimationFrame(animate)        // loop
+}
