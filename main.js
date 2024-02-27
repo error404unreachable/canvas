@@ -11,10 +11,14 @@ img.src = "Red.png";   // load image
 
 function animate() {
   context.clearRect(0, 0, canvas.width, canvas.height);  // clear canvas
-  context.drawImage(img, x, y);                       // draw image at current position
+  context.drawImage(img, x, y);               
+if (x > 0) {
+    randomizer();
+}
+    // draw image at current position
 }
 
 function randomizer() {
-    x -= 50;
+    x -= 10;
     requestAnimationFrame(animate);
 }
