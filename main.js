@@ -5,19 +5,13 @@ var img = new Image(),
     x = canvas.width,
     y = 0;
 
-img.onload = randomizer;
+img.onload = animate;
 img.src = "Red.png";   // load image
 
 function animate() {
   context.clearRect(0, 0, canvas.width, canvas.height);  // clear canvas
   context.drawImage(img, x, y);               
-if (x > 0) {
-    randomizer();
-}
+  x -= 4;
+  if (x > 250) requestAnimationFrame(animate)  
     // draw image at current position
-}
-
-function randomizer() {
-    x -= 10;
-    requestAnimationFrame(animate);
 }
