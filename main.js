@@ -2,7 +2,7 @@ let canvas = document.getElementById("canvas");
 let count = 0;
 let context = canvas.getContext("2d");
 
-for (count == 4) {
+for (count < 4) {
 var img = new Image(),
     x = canvas.width,
     y = 0,
