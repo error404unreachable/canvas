@@ -2,11 +2,13 @@ let canvas = document.getElementById("canvas");
 let context = canvas.getContext("2d");
 let xPos = 0;
 
-for (i = 0; i < 9; i++) {
- var key = new Image(),
+function drawKeys() {
+ for (i = 0; i < 9; i++) {
+  var key = new Image(),
     x = xPos;
     y = 0;
     xPos += 25;
+ }
 }
 
 key.onload = animate;
