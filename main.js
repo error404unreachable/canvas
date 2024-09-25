@@ -9,10 +9,9 @@ function drawKeys() {
     y = 0;
     xPos += 25;
  }
+ key.src = "Red.png";
+ key.onload => requestAnimationFrame("animate");
 }
-
-key.onload = animate();
-key.src = "Red.png";   // load image
 
 function animate() {
   context.clearRect(0, 0, canvas.width, canvas.height);  // clear canvas
