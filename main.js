@@ -11,7 +11,7 @@ function drawKeys() {
  }
 }
 
-key.onload = animate;
+key.onload = animate();
 key.src = "Red.png";   // load image
 
 function animate() {
